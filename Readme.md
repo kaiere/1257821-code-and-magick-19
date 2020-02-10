@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Olga Chupeykina](https://up.htmlacademy.ru/javascript/19/user/1257821).
-* Наставник: `Неизвестно`.
+* Наставник: [Павел Фанасков](https://htmlacademy.ru/profile/id615993). 
 
 ---
 
