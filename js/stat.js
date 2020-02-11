@@ -42,6 +42,11 @@ window.renderStatistics = function (ctx, names, times) {
   var maxTime = Math.round(getMaxElement(times));
 
   for (var i = 0; i < names.length; i++) {
+    if (names[i] === 'Вы') {
+      ctx.fillStyle = 'rgba(255, 0, 0, 1)';
+    } else {
+      ctx.fillStyle = 'hsl(240, 100%, ' + Math.round(Math.random() * 100) + '%)';
+    }
     ctx.fillRect(STAT_X + (BAR_WIDTH + BAR_GAP) * i, NAMES_Y - MESSAGE_GAP - ((BAR_HEIGHT * times[i]) / maxTime), BAR_WIDTH, (BAR_HEIGHT * times[i]) / maxTime);
   }
 
