@@ -5,6 +5,9 @@ var CLOUD_HEIGHT = 270;
 var CLOUD_X = 100;
 var CLOUD_Y = 10;
 var CLOUD_GAP = 10;
+var MESSAGE_X = 120;
+var MESSAGE_Y = 40;
+var MESSAGE_GAP = 20;
 
 var renderCloud = function (ctx, x, y, color) {
   ctx.fillStyle = color;
