@@ -34,4 +34,6 @@ window.renderStatistics = function (ctx, names, times) {
   ctx.fillText('Ура вы победили!', MESSAGE_X, MESSAGE_Y);
   ctx.fillText('Список результатов', MESSAGE_X, MESSAGE_Y + MESSAGE_GAP);
 
+  var maxTime = Math.round(getMaxElement(times));
+
 };
