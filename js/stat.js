@@ -17,4 +17,10 @@ var renderCloud = function (ctx, x, y, color) {
 window.renderStatistics = function (ctx, names, times) {
   renderCloud(ctx, CLOUD_X + CLOUD_GAP, CLOUD_Y + CLOUD_GAP, 'rgba(0, 0, 0, 0.7)');
   renderCloud(ctx, CLOUD_X, CLOUD_Y, '#fff');
+
+  ctx.font = '16px PT Mono';
+  ctx.fillStyle = '#000';
+  ctx.fillText('Ура вы победили!', MESSAGE_X, MESSAGE_Y);
+  ctx.fillText('Список результатов', MESSAGE_X, MESSAGE_Y + MESSAGE_GAP);
+
 };
