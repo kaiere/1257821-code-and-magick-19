@@ -48,6 +48,9 @@ window.renderStatistics = function (ctx, names, times) {
       ctx.fillStyle = 'hsl(240, 100%, ' + Math.round(Math.random() * 100) + '%)';
     }
     ctx.fillRect(STAT_X + (BAR_WIDTH + BAR_GAP) * i, NAMES_Y - MESSAGE_GAP - ((BAR_HEIGHT * times[i]) / maxTime), BAR_WIDTH, (BAR_HEIGHT * times[i]) / maxTime);
+    ctx.fillStyle = '#000';
+    ctx.fillText(Math.round(times[i]), STAT_X + (BAR_WIDTH + BAR_GAP) * i, NAMES_Y - MESSAGE_GAP * 1.5 - ((BAR_HEIGHT * times[i]) / maxTime));
+    ctx.fillText(names[i], STAT_X + (BAR_WIDTH + BAR_GAP) * i, NAMES_Y);
   }
 
 };
