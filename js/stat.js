@@ -41,4 +41,8 @@ window.renderStatistics = function (ctx, names, times) {
 
   var maxTime = Math.round(getMaxElement(times));
 
+  for (var i = 0; i < names.length; i++) {
+    ctx.fillRect(STAT_X + (BAR_WIDTH + BAR_GAP) * i, NAMES_Y - MESSAGE_GAP - ((BAR_HEIGHT * times[i]) / maxTime), BAR_WIDTH, (BAR_HEIGHT * times[i]) / maxTime);
+  }
+
 };
