@@ -12,6 +12,7 @@ var BAR_WIDTH = 40;
 var BAR_GAP = 50;
 var BAR_HEIGHT = 150;
 var STAT_X = 130;
+var NAMES_Y = 270;
 
 var renderCloud = function (ctx, x, y, color) {
   ctx.fillStyle = color;
