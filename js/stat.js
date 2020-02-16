@@ -15,8 +15,10 @@ var STAT_X = 130;
 var NAMES_Y = 270;
 
 var renderCloud = function (ctx, x, y, color) {
+  ctx.save();
   ctx.fillStyle = color;
   ctx.fillRect(x, y, CLOUD_WIDTH, CLOUD_HEIGHT);
+  ctx.restore();
 };
 
 var getMaxElement = function (arr) {
@@ -52,5 +54,4 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillText(Math.round(times[i]), STAT_X + (BAR_WIDTH + BAR_GAP) * i, NAMES_Y - MESSAGE_GAP * 1.5 - ((BAR_HEIGHT * times[i]) / maxTime));
     ctx.fillText(names[i], STAT_X + (BAR_WIDTH + BAR_GAP) * i, NAMES_Y);
   }
-
 };
