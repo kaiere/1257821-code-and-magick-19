@@ -18,3 +18,15 @@ var similarListElement = document.querySelector('.setup-similar-list');
 var similarWizardTemplate = document.querySelector('#similar-wizard-template')
   .content
   .querySelector('.setup-similar-item');
+
+var getWizards = function (wizardsAmount) {
+  var wizards = [];
+  for (var i = 0; i < wizardsAmount; i++) {
+    wizards.push({
+      name: getRandomArrayIndex(WIZARD_NAMES) + ' ' + getRandomArrayIndex(WIZARD_SURNAMES),
+      coatColor: getRandomArrayIndex(COAT_COLORS),
+      eyesColor: getRandomArrayIndex(EYES_COLORS)
+    });
+  }
+  return wizards;
+};
