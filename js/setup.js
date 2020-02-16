@@ -40,3 +40,13 @@ var renderWizard = function (wizard) {
 
   return wizardElement;
 };
+
+var addWizards = function () {
+  var wizards = getWizards(WIZARDS_AMOUNT);
+  var fragment = document.createDocumentFragment();
+  for (var i = 0; i < wizards.length; i++) {
+    fragment.appendChild(renderWizard(wizards[i]));
+  }
+  similarListElement.appendChild(fragment);
+};
+
