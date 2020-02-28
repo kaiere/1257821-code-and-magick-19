@@ -103,3 +103,9 @@ var closeWindow = function () {
   wizardEyes.removeEventListener('click', onEyesClick);
   wizardFireball.removeEventListener('click', onFireballClick);
 };
+
+var onWindowEscPress = function (evt) {
+  if (evt.key === ESC_KEY && setupUserName !== document.activeElement) {
+    closeWindow();
+  }
+};
