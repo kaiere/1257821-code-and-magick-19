@@ -124,3 +124,8 @@ setupClose.addEventListener('click', function () {
   closeWindow();
 });
 
+setupClose.addEventListener('keydown', function (evt) {
+  if (evt.key === ENTER_KEY) {
+    userDialog.classList.add('hidden');
+  }
+});
