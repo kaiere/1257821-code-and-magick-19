@@ -114,6 +114,12 @@ setupOpen.addEventListener('click', function () {
   openWindow();
 });
 
+setupOpen.addEventListener('keydown', function (evt) {
+  if (evt.key === ENTER_KEY) {
+    openWindow();
+  }
+});
+
 setupClose.addEventListener('click', function () {
   closeWindow();
 });
