@@ -113,3 +113,8 @@ var onWindowEscPress = function (evt) {
 setupOpen.addEventListener('click', function () {
   openWindow();
 });
+
+setupClose.addEventListener('click', function () {
+  closeWindow();
+});
+
