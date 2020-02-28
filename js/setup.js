@@ -66,3 +66,12 @@ var wizardEyes = setupWizard.querySelector('.wizard-eyes');
 var inputEyes = userDialog.querySelector('[name=eyes-color]');
 var wizardFireball = userDialog.querySelector('.setup-fireball-wrap');
 var inputFireball = wizardFireball.querySelector('[name=fireball-color]');
+
+var getElementColor = function (array, element, input) {
+  var currentColor = getRandomArrayIndex(array);
+  if (element === wizardFireball) {
+    element.style.backgroundColor = currentColor;
+  }
+  element.style.fill = currentColor;
+  input.value = currentColor;
+};
