@@ -75,3 +75,15 @@ var getElementColor = function (array, element, input) {
   element.style.fill = currentColor;
   input.value = currentColor;
 };
+
+var onCoatClick = function () {
+  getElementColor(COAT_COLORS, wizardCoat, inputCoat);
+};
+
+var onEyesClick = function () {
+  getElementColor(EYES_COLORS, wizardEyes, inputEyes);
+};
+
+var onFireballClick = function () {
+  getElementColor(FIREBALL_COLORS, wizardFireball, inputFireball);
+};
