@@ -95,3 +95,11 @@ var openWindow = function () {
   wizardEyes.addEventListener('click', onEyesClick);
   wizardFireball.addEventListener('click', onFireballClick);
 };
+
+var closeWindow = function () {
+  userDialog.classList.add('hidden');
+  document.removeEventListener('keydown', onWindowEscPress);
+  wizardCoat.removeEventListener('click', onCoatClick);
+  wizardEyes.removeEventListener('click', onEyesClick);
+  wizardFireball.removeEventListener('click', onFireballClick);
+};
