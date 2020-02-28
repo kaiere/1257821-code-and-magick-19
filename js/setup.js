@@ -55,3 +55,14 @@ var addWizards = function () {
 
 addWizards();
 document.querySelector('.setup-similar').classList.remove('hidden');
+
+var setupOpen = document.querySelector('.setup-open');
+var setupClose = document.querySelector('.setup-close');
+var setupUserName = userDialog.querySelector('.setup-user-name');
+var setupWizard = document.querySelector('.setup-wizard');
+var wizardCoat = setupWizard.querySelector('.wizard-coat');
+var inputCoat = userDialog.querySelector('[name=coat-color]');
+var wizardEyes = setupWizard.querySelector('.wizard-eyes');
+var inputEyes = userDialog.querySelector('[name=eyes-color]');
+var wizardFireball = userDialog.querySelector('.setup-fireball-wrap');
+var inputFireball = wizardFireball.querySelector('[name=fireball-color]');
