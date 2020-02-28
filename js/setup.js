@@ -87,3 +87,11 @@ var onEyesClick = function () {
 var onFireballClick = function () {
   getElementColor(FIREBALL_COLORS, wizardFireball, inputFireball);
 };
+
+var openWindow = function () {
+  userDialog.classList.remove('hidden');
+  document.addEventListener('keydown', onWindowEscPress);
+  wizardCoat.addEventListener('click', onCoatClick);
+  wizardEyes.addEventListener('click', onEyesClick);
+  wizardFireball.addEventListener('click', onFireballClick);
+};
