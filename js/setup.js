@@ -67,7 +67,7 @@ var inputEyes = userDialog.querySelector('[name=eyes-color]');
 var wizardFireball = userDialog.querySelector('.setup-fireball-wrap');
 var inputFireball = wizardFireball.querySelector('[name=fireball-color]');
 
-var getElementColor = function (array, element, input) {
+var changeElementColor = function (array, element, input) {
   var currentColor = getRandomArrayIndex(array);
   if (element === wizardFireball) {
     element.style.backgroundColor = currentColor;
@@ -77,15 +77,15 @@ var getElementColor = function (array, element, input) {
 };
 
 var onCoatClick = function () {
-  getElementColor(COAT_COLORS, wizardCoat, inputCoat);
+  changeElementColor(COAT_COLORS, wizardCoat, inputCoat);
 };
 
 var onEyesClick = function () {
-  getElementColor(EYES_COLORS, wizardEyes, inputEyes);
+  changeElementColor(EYES_COLORS, wizardEyes, inputEyes);
 };
 
 var onFireballClick = function () {
-  getElementColor(FIREBALL_COLORS, wizardFireball, inputFireball);
+  changeElementColor(FIREBALL_COLORS, wizardFireball, inputFireball);
 };
 
 var openWindow = function () {
