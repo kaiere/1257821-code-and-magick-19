@@ -78,7 +78,7 @@ var changeFireballColor = function (array, element, input) {
   element.style.background = currentColor;
   element.style.fill = currentColor;
   input.value = currentColor;
-}
+};
 
 var onCoatClick = function () {
   changeElementColor(COAT_COLORS, wizardCoat, inputCoat);
