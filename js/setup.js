@@ -69,12 +69,16 @@ var inputFireball = wizardFireball.querySelector('[name=fireball-color]');
 
 var changeElementColor = function (array, element, input) {
   var currentColor = getRandomArrayIndex(array);
-  if (element === wizardFireball) {
-    element.style.backgroundColor = currentColor;
-  }
   element.style.fill = currentColor;
   input.value = currentColor;
 };
+
+var changeFireballColor = function (array, element, input) {
+  var currentColor = getRandomArrayIndex(array);
+  element.style.background = currentColor;
+  element.style.fill = currentColor;
+  input.value = currentColor;
+}
 
 var onCoatClick = function () {
   changeElementColor(COAT_COLORS, wizardCoat, inputCoat);
@@ -85,7 +89,7 @@ var onEyesClick = function () {
 };
 
 var onFireballClick = function () {
-  changeElementColor(FIREBALL_COLORS, wizardFireball, inputFireball);
+  changeFireballColor(FIREBALL_COLORS, wizardFireball, inputFireball);
 };
 
 var openWindow = function () {
