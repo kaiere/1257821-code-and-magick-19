@@ -1,5 +1,7 @@
 'use strict';
 
+// Отрисовка братьев Пендальфа
+(function () {
 var similarListElement = document.querySelector('.setup-similar-list');
 
 var similarWizardTemplate = document.querySelector('#similar-wizard-template')
@@ -39,3 +41,4 @@ var addWizards = function () {
 
 addWizards();
 document.querySelector('.setup-similar').classList.remove('hidden');
+})();
