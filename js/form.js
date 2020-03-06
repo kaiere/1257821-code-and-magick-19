@@ -2,7 +2,7 @@
 
 // Открытие окна и колоризация
 
-(function (){
+(function () {
   var userDialog = document.querySelector('.setup');
   var setupOpen = document.querySelector('.setup-open');
   var setupClose = document.querySelector('.setup-close');
