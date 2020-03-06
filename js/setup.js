@@ -10,9 +10,9 @@ var getWizards = function (wizardsAmount) {
   var wizards = [];
   for (var i = 0; i < wizardsAmount; i++) {
     wizards.push({
-      name: getRandomArrayIndex(WIZARD_NAMES) + ' ' + getRandomArrayIndex(WIZARD_SURNAMES),
-      coatColor: getRandomArrayIndex(COAT_COLORS),
-      eyesColor: getRandomArrayIndex(EYES_COLORS)
+      name: window.utils.getRandomArrayIndex(window.utils.WIZARD_NAMES) + ' ' + window.utils.getRandomArrayIndex(window.utils.WIZARD_SURNAMES),
+      coatColor: window.utils.getRandomArrayIndex(window.utils.COAT_COLORS),
+      eyesColor: window.utils.getRandomArrayIndex(window.utils.EYES_COLORS)
     });
   }
   return wizards;
@@ -29,7 +29,7 @@ var renderWizard = function (wizard) {
 };
 
 var addWizards = function () {
-  var wizards = getWizards(WIZARDS_AMOUNT);
+  var wizards = getWizards(window.utils.WIZARDS_AMOUNT);
   var fragment = document.createDocumentFragment();
   for (var i = 0; i < wizards.length; i++) {
     fragment.appendChild(renderWizard(wizards[i]));
@@ -52,28 +52,28 @@ var wizardFireball = userDialog.querySelector('.setup-fireball-wrap');
 var inputFireball = wizardFireball.querySelector('[name=fireball-color]');
 
 var changeElementColor = function (array, element, input) {
-  var currentColor = getRandomArrayIndex(array);
+  var currentColor = window.utils.getRandomArrayIndex(array);
   element.style.fill = currentColor;
   input.value = currentColor;
 };
 
 var changeFireballColor = function (array, element, input) {
-  var currentColor = getRandomArrayIndex(array);
+  var currentColor = window.utils.getRandomArrayIndex(array);
   element.style.background = currentColor;
   element.style.fill = currentColor;
   input.value = currentColor;
 };
 
 var onCoatClick = function () {
-  changeElementColor(COAT_COLORS, wizardCoat, inputCoat);
+  changeElementColor(window.utils.COAT_COLORS, wizardCoat, inputCoat);
 };
 
 var onEyesClick = function () {
-  changeElementColor(EYES_COLORS, wizardEyes, inputEyes);
+  changeElementColor(window.utils.EYES_COLORS, wizardEyes, inputEyes);
 };
 
 var onFireballClick = function () {
-  changeFireballColor(FIREBALL_COLORS, wizardFireball, inputFireball);
+  changeFireballColor(window.utils.FIREBALL_COLORS, wizardFireball, inputFireball);
 };
 
 var openWindow = function () {
@@ -93,7 +93,7 @@ var closeWindow = function () {
 };
 
 var onWindowEscPress = function (evt) {
-  if (evt.key === ESC_KEY && setupUserName !== document.activeElement) {
+  if (evt.key === window.utils.ESC_KEY && setupUserName !== document.activeElement) {
     closeWindow();
   }
 };
@@ -103,7 +103,7 @@ setupOpen.addEventListener('click', function () {
 });
 
 setupOpen.addEventListener('keydown', function (evt) {
-  if (evt.key === ENTER_KEY) {
+  if (evt.key === window.utils.ENTER_KEY) {
     openWindow();
   }
 });
@@ -113,7 +113,7 @@ setupClose.addEventListener('click', function () {
 });
 
 setupClose.addEventListener('keydown', function (evt) {
-  if (evt.key === ENTER_KEY) {
+  if (evt.key === window.utils.ENTER_KEY) {
     userDialog.classList.add('hidden');
   }
 });
