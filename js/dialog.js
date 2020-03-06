@@ -36,4 +36,24 @@
       userDialog.style.top = (userDialog.offsetTop - shift.y) + 'px';
       userDialog.style.left = (userDialog.offsetLeft - shift.x) + 'px';
     };
+
+    var onMouseUp = function (upEvt) {
+      upEvt.preventDefault();
+
+      document.removeEventListener('mousemove', onMouseMove);
+      document.removeEventListener('mouseup', onMouseUp);
+
+      if (dragged) {
+        var onClickPreventDefault = function (clickEvt) {
+          clickEvt.preventDefault();
+          upload.removeEventListener('click', onClickPreventDefault);
+        };
+        upload.addEventListener('click', onClickPreventDefault);
+      }
+
+    };
+
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('mouseup', onMouseUp);
+  });
 })();
