@@ -42,6 +42,8 @@
 
   var openWindow = function () {
     userDialog.classList.remove('hidden');
+    userDialog.style.top = '';
+    userDialog.style.left = '';
     document.addEventListener('keydown', onWindowEscPress);
     wizardCoat.addEventListener('click', onCoatClick);
     wizardEyes.addEventListener('click', onEyesClick);
