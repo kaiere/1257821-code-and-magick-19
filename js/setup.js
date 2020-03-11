@@ -8,18 +8,6 @@
     .content
     .querySelector('.setup-similar-item');
 
-  var getWizards = function (wizardsAmount) {
-    var wizards = [];
-    for (var i = 0; i < wizardsAmount; i++) {
-      wizards.push({
-        name: window.utils.getRandomArrayIndex(window.utils.WIZARD_NAMES) + ' ' + window.utils.getRandomArrayIndex(window.utils.WIZARD_SURNAMES),
-        coatColor: window.utils.getRandomArrayIndex(window.utils.COAT_COLORS),
-        eyesColor: window.utils.getRandomArrayIndex(window.utils.EYES_COLORS)
-      });
-    }
-    return wizards;
-  };
-
   var renderWizard = function (wizard) {
     var wizardElement = similarWizardTemplate.cloneNode(true);
 
